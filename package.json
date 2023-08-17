@@ -1,0 +1,23 @@
+{
+  "name": "top-npm-packages",
+  "version": "1.0.0",
+  "description": "combine the 15 most popular npm packages into one app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullmetalfenix/top-npm-packages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullmetalfenix/top-npm-packages/issues"
+  },
+  "homepage": "https://github.com/fullmetalfenix/top-npm-packages#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
