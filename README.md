@@ -2,7 +2,7 @@
 combine the 15 most popular npm packages into one app
 based on the article [here](https://www.turing.com/blog/top-npm-packages-for-node-js-developers/)
 
-
+*** Added nodemon as well as I got tired of restarting express
 
 ### Whats been done with what: 
 1 - Express : node framework. set up basic server - one demo endpoint for future use
