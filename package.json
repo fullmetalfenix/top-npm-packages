@@ -19,6 +19,7 @@
   "homepage": "https://github.com/fullmetalfenix/top-npm-packages#readme",
   "dependencies": {
     "async": "^3.2.4",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "lodash": "^4.17.21"
   }
 }
