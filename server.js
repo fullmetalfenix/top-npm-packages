@@ -4,9 +4,14 @@ const app = express();
 const port = 3000;
 const async = require("async");
 const _ = require("lodash");
-// const cloudinary = require('cloudinary').v2
-// cloudinary.url("sample.jpg", {width: 100, height: 150, crop: "fill", fetch_format: "auto"})
 
+const cloudinary = require('cloudinary');
+          
+cloudinary.config({ 
+  cloud_name: process.env.cloud_name, 
+  api_key: process.env.api_key, 
+  api_secret: process.env.api_secret
+});
 
 
 //sends in parallel - returns array of values
@@ -53,9 +58,13 @@ app.get('/test', (req,res) =>{
   res.send(process.env.USER_ID)
 })
 
-// app.get("/cloudinary", (req, res) =>{
-//   res.send(cloudinary.image("https://res.cloudinary.com/demo/image/upload/c_crop,h_200,w_300,x_355,y_410/c_fill,h_100,w_130/brown_sheep.jpg", { width: 500, height: 500, crop: "fill", version: "1573726751", cloud_name: "demo", secure: "true", alt: "Casual Jacket"}))
-// })
+app.get("/cloudinary", (req, res) =>{
+  res.send(cloudinary.image("https://res.cloudinary.com/dv7v39gkl/image/upload/v1692408625/cld-sample-2.jpg"))
+})
+
+app.get("/cloudinary-resize", (req, res) =>{
+  res.send(cloudinary.image("https://res.cloudinary.com/dv7v39gkl/image/upload/v1692408625/cld-sample-2.jpg", { width: 500, height: 500, crop: "fill", version: "1573726751", cloud_name: "demo", secure: "true", alt: "Mountain top surrounded by clouds"}))
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
