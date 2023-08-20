@@ -6,7 +6,9 @@ const async = require("async");
 const _ = require("lodash");
 
 const cloudinary = require('cloudinary');
-          
+
+const axios = require('axios')
+
 cloudinary.config({ 
   cloud_name: process.env.cloud_name, 
   api_key: process.env.api_key, 
@@ -64,6 +66,13 @@ app.get("/cloudinary", (req, res) =>{
 
 app.get("/cloudinary-resize", (req, res) =>{
   res.send(cloudinary.image("https://res.cloudinary.com/dv7v39gkl/image/upload/v1692408625/cld-sample-2.jpg", { width: 500, height: 500, crop: "fill", version: "1573726751", cloud_name: "demo", secure: "true", alt: "Mountain top surrounded by clouds"}))
+})
+
+
+app.get("/axios", async (req, res) =>{
+  var {data} = await axios('https://swapi.dev/api/people/1')
+  res.send(data)
+
 })
 
 app.listen(port, () => {

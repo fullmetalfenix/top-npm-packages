@@ -13,3 +13,5 @@ based on the article [here](https://www.turing.com/blog/top-npm-packages-for-nod
 3 - Lodash: utility library that is usefull for working with data / objects - example is with filter for all objects but could do find for first etc. [here](https://lodash.com/docs/4.17.15)
 
 4 - Cloudinary: Signed up for developer free tier - claims to be able to resize / manipulate images in JS - tried it and it really works! says it can do face detection and all sorts of stuff - I might try this out in the future but as is pretty impressive and would be super helpfull on a react mobile site.
+
+5 - Axios: This I have used before though I usually use node-fetch - very easy syntax and usefull for backend and frontend - converts to json automatically. Alos supposed to have a very usefull progress bar module associated with it but I haven't tried it
